@@ -11,3 +11,7 @@ export { resolver as productDetailsResolver } from './schema/productDetailsResol
 // Product Search
 export { typeDef as productSearchTypeDef } from './schema/productSearchTypeDef';
 export { resolver as productSearchResolver } from './schema/productSearchResolvers';
+
+// Category Search
+export { typeDef as categoryTypeDef } from './schema/categoryTypeDef';
+export { resolver as categoryResolver } from './schema/categoryResolvers';

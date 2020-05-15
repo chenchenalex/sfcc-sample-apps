@@ -13,6 +13,8 @@ import {
     productDetailsResolver,
     productSearchTypeDef,
     productSearchResolver,
+    categoryTypeDef,
+    categoryResolver,
 } from './api';
 
 export { getPrices } from './api/schema/priceHelpers';
@@ -29,10 +31,11 @@ export class ProductAPI {
             'ProductAPI.typeDefs()',
             productDetailsTypeDef,
             productSearchTypeDef,
+            categoryTypeDef,
         );
         core.logger.log('===========================');
         core.logger.log('===========================');
-        return [productDetailsTypeDef, productSearchTypeDef];
+        return [productDetailsTypeDef, productSearchTypeDef, categoryTypeDef];
     }
 
     getResolvers(config) {
@@ -44,6 +47,7 @@ export class ProductAPI {
         return resolverFactory(config, [
             productDetailsResolver,
             productSearchResolver,
+            categoryResolver,
         ]);
     }
 }
